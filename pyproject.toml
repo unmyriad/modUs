@@ -1,0 +1,32 @@
+[project]
+name = "modus"
+version = "0.0.1"
+description = "Benchmarking tool to run problems on QPUs, CPUs, and GPUs"
+readme = "README.md"
+authors = [
+    { name = "Habibur Rahman", email = "habib@isoldien.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "networkx>=3.7",
+    "numpy>=2.5.4",
+    "pandas>=3.0.6",
+    "qiskit>=2.5.2",
+    "qiskit-aer>=0.17.2",
+    "scipy>=1.18.1",
+    "seaborn>=0.13.2",
+    "textual>=8.2.8",
+]
+
+[project.scripts]
+modus = "modus:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
